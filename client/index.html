@@ -81,7 +81,7 @@
         </div>
         
         <div class="location-input">
-        <input type="text" placeholder="Enter location" v-model="location">
+        <input type="text" placeholder="Enter location" @keyup.enter="search.call(this, location)" v-model="location">
         <input type="submit" value="Search" @click="search.call(this, location)">
         </div>
 
